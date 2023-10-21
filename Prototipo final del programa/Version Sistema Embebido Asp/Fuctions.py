@@ -13,6 +13,10 @@ import cv2
 import numpy as np
 import pytesseract
 import potrace
+import json 
+import requests
+
+url = "https://ocr.asprise.com/api/v1/receipt"
 
 
 clienteTCPIP = 0
@@ -189,9 +193,19 @@ def Process_number(image):
     # Apply Gaussian denoising
     denoised_image = cv2.GaussianBlur(blurred_image, (3, 3), 0)
     cv2.imwrite("AnguloJoint1.jpg",denoised_image)
-    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-    whitelist = '0123456789.°-+'
-    Texto_joint = pytesseract.image_to_string(denoised_image, config=f'--psm 6 -c tessedit_char_whitelist={whitelist}')
-    Texto_joint = float(Texto_joint)
+
+    #pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+    #whitelist = '0123456789.°-+'
+    #Texto_joint = pytesseract.image_to_string(denoised_image, config=f'--psm 6 -c tessedit_char_whitelist={whitelist}')
+    #Texto_joint = float(Texto_joint)
+
+
+    res = requests.post(url,data = {'api_k':'TEST','recognizer':'auto','ref_no':'oct_python_123'},
+                    files = {'file': open("AnguloJoint1.jpg",'rb')})
+    with open("response1.json","w") as f:
+        json.dump(json.loads(res.text),f)
+    with open("response1.json","r") as f:
+        data = json.load(f)
+    Texto_joint = float(data['receipts'][0]['ocr_text'])
     
     return Texto_joint
