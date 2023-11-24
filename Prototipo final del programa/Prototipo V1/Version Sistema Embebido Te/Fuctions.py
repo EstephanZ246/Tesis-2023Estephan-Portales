@@ -35,8 +35,8 @@ def ShowWindow(window):
 # Tomar screenshot
 def TakeScreenshot(window,image_label):
 
-    x0 = 703
-    y0 = 351
+    x0 = 700
+    y0 = 347
     ancho = x0 + 521
     alto = y0 + 403
 
@@ -97,7 +97,7 @@ def Desconectar_COM():
 def Mandar_Robot():
     global COM_PORT
 
-    Cadena_datos = ""
+    Cadena_datos = ""#
     if (JA1 and JB1 and JB2 and JC1):
 
         Cadena_datos = "JA" + JA1 + "JB" + JB1 + "," + JB2 + "JC" + JC1 + ";"
@@ -182,7 +182,7 @@ def Process_number(image):
     width = int(image.shape[1] * scale_percent / 100)
     height = int(image.shape[0] * scale_percent / 100)
     dim = (width, height)
-    resized = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
+    resized = cv2.resize(image, dim, interpolation = cv2.INTER_CUBIC)
     gray_image = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
     blurred_image = cv2.GaussianBlur(gray_image, (5, 5), 0)
 
