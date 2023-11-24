@@ -99,9 +99,6 @@ Tanto el cliente como el servidor dependen del archivo "functions.py" por lo que
 
 En todos los archivos se encuentra una buena descripción de para qué sirve y qué realiza cada algoritmo implementado en cada uno.
 
+# Validacion de algoritmos
 
-![](https://drive.google.com/file/d/1_VVN-TtumUwr993h8hRWZ2wOp4otvdEz/view?usp=drive_link)
-
-![Foto](https://drive.google.com/file/d/1ZtHWVzgtFQoNfXD9vZrSwMrbmjFkqFgQ/view?usp=drive_link)
-``` 
-![Foto](https://drive.google.com/file/d/1ZtHWVzgtFQoNfXD9vZrSwMrbmjFkqFgQ/view?usp=drive_link)
+En esta carpeta se encuentran algunos archivos de los algoritmos implementados en la interfaz. 
