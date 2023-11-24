@@ -1,4 +1,8 @@
-﻿# OPTIMIZACION DE LA HERRAMIENTA DE PROCESAMIENTO DE IMÁGENES PARA EL SISTEMA BRAINLAB DE HUMANA
+﻿
+Video explicativo: https://youtu.be/aTcsYL6cX6s
+
+
+# OPTIMIZACION DE LA HERRAMIENTA DE PROCESAMIENTO DE IMÁGENES PARA EL SISTEMA BRAINLAB DE HUMANA
 
 
 En este repositorio se encuentran todos los documentos que me fueron útiles para desarrollar mi trabajo de graduación, así como las pruebas independientes que estuve realizando para poder validar las herramientas que se imprementaron en el sistema final de reconocimiento de ángulos de configuración. Entre las validaciones que se realizaron está:
