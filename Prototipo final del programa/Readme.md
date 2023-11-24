@@ -32,4 +32,7 @@ La carpeta V2 contiene lo mismo que la versión V1, con la excepción de las sig
 
 Esta versión "Modificadas para Raspberry" contienen lo mismo que la versión del servidor remoto, pero omite algunas líneas de código para poder ejecutarse correctamente en la versión de Raspbian.
 
+## Instalar librerías
+
+
 
