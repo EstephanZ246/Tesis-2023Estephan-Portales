@@ -21,7 +21,6 @@ def Crear_Interfaz():
     Combo_ports = ttk.Combobox(width=12,height=20,font=("Arial",14))
     Combo_ports.place(x=150,y=71+50)
 
-
 #    """
 
     fp = open("WhiteScreen.jpg","rb")

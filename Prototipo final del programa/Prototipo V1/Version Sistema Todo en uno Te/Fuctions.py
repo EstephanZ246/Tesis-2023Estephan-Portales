@@ -112,6 +112,7 @@ def Mandar_Robot():
             
             if ((float(TempA) == float(JA1))and(float(TempB) == float(JB1))and(float(TempC) == float(JB2))and(float(TempD) == float(JC1))):
                 print("Transmisión Exitosa")
+                
             else:
                 print("Error en la transmisión de datos")
 
