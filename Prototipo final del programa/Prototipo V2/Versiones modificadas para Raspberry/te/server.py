@@ -46,7 +46,7 @@ class ServerSocket:
 
                 # Primer recorte para reconocer el joint 
                 #AjuRecorJoint = [5,22,5+42,22+206] # x,y,vetical,horizontal
-                AjuRecorJoint = [47,52,47+40,52+207] # x,y,vertcal,horizontal
+                AjuRecorJoint = [45,45,45+33,45+199] # x,y,vertcal,horizontal
                 Recorte_Joint = decimg[AjuRecorJoint[0]:AjuRecorJoint[2],AjuRecorJoint[1]:AjuRecorJoint[3]]
                 cv2.imwrite("Joint Recibido.jpg",Recorte_Joint)
                 Texto_joint = pytesseract.image_to_string(Recorte_Joint, config=f'--psm 6')
@@ -57,7 +57,7 @@ class ServerSocket:
                     # Se procesan los ángulos y se mandan de regreso
                     
                     #AjuRecorAng = [168,372,168+28,372+28] # x,y,vetical,horizontal
-                    AjuRecorAng = [293,611,293+38,611+45] # x,y,vetical,horizontal
+                    AjuRecorAng = [283,589,283+22,589+42] # x,y,vetical,horizontal
                     Recorte_Ang = decimg[AjuRecorAng[0]:AjuRecorAng[2],AjuRecorAng[1]:AjuRecorAng[3]]
                     Texto = Process_number(Recorte_Ang)
                     cv2.imwrite('AnguloJoint1.jpg',Recorte_Ang)
@@ -119,7 +119,7 @@ class ServerSocket:
 
 def main():
 
-    server = ServerSocket('192.168.0.25', 8080)
+    server = ServerSocket('192.168.137.18', 8080)
 
 if __name__ == "__main__":
     main()

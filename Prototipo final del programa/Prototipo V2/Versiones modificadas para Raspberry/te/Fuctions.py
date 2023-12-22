@@ -27,7 +27,7 @@ def Process_number(image):
 
     #image = cv2.imread(image_path)
 
-    scale_percent = 800# 1500 funciona maomeno
+    scale_percent = 350# 1500 funciona maomeno
     width = int(image.shape[1] * scale_percent / 100)
     height = int(image.shape[0] * scale_percent / 100)
     dim = (width, height)
