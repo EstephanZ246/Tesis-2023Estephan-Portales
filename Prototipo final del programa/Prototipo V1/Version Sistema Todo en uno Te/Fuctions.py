@@ -34,9 +34,10 @@ def ShowWindow(window):
 def TakeScreenshot(window,image_label):
 
     x0 = 700
-    y0 = 347
-    ancho = x0 + 521
-    alto = y0 + 403
+    y0 = 325
+    ancho = x0 + 524
+    alto = y0 + 409
+
 
 
     global Captura
@@ -135,7 +136,7 @@ def MandarCaptura(Label_Joint1_Value,Label_Joint2_Value,Label_Joint2_1_Value,Lab
     imagencapture = cv2.imread(Captura)
 
     # Primer recorte para reconocer el joint 
-    AjuRecorJoint = [13,23,13+30,23+200] # x,y,ancho,alto
+    AjuRecorJoint = [18,23,18+29,23+203] # x,y,ancho,alto
     Recorte_Joint = imagencapture[AjuRecorJoint[0]:AjuRecorJoint[2],AjuRecorJoint[1]:AjuRecorJoint[3]]
     cv2.imwrite("Joint Recibido.jpg",Recorte_Joint)
 
@@ -146,7 +147,7 @@ def MandarCaptura(Label_Joint1_Value,Label_Joint2_Value,Label_Joint2_1_Value,Lab
     if Texto_joint.find('1') >= 0:
         # Se procesan los ángulos y se mandan de regreso
                     
-        AjuRecorAng = [179,376,179+15,376+27] # x,y,ancho,alto
+        AjuRecorAng = [179,376,179+14,376+29] # x,y,ancho,alto
         Recorte_Ang = imagencapture[AjuRecorAng[0]:AjuRecorAng[2],AjuRecorAng[1]:AjuRecorAng[3]]
         Texto = Process_number(Recorte_Ang)
         cv2.imwrite('JointPrueba.jpg',Recorte_Ang)

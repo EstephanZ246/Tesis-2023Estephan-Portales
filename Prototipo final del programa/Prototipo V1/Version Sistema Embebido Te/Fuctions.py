@@ -36,9 +36,9 @@ def ShowWindow(window):
 def TakeScreenshot(window,image_label):
 
     x0 = 700
-    y0 = 347
-    ancho = x0 + 521
-    alto = y0 + 403
+    y0 = 325
+    ancho = x0 + 524
+    alto = y0 + 409
 
     global Captura
 

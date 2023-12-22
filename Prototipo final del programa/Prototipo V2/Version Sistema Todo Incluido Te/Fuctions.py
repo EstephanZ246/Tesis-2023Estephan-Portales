@@ -33,10 +33,10 @@ def ShowWindow(window):
 # Tomar screenshot
 def TakeScreenshot(window,image_label):
 
-    x0 = 532
-    y0 = 190
-    ancho = x0 + 859
-    alto = y0 + 667
+    x0 = 700
+    y0 = 325
+    ancho = x0 + 524
+    alto = y0 + 409
 
     global Captura
     global imagencapturada

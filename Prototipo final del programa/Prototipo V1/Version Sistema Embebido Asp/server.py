@@ -47,7 +47,7 @@ class ServerSocket:
                 cv2.imwrite("Captura Recibida.jpg",decimg)# Guardamos captura recibida
 
                 # Primer recorte para reconocer el joint 
-                AjuRecorJoint = [13,23,13+30,23+200] # x,y,ancho,alto
+                AjuRecorJoint = [18,23,18+29,23+203] # x,y,ancho,alto
                 Recorte_Joint = decimg[AjuRecorJoint[0]:AjuRecorJoint[2],AjuRecorJoint[1]:AjuRecorJoint[3]]
                 cv2.imwrite("Joint Recibido.jpg",Recorte_Joint)
 
@@ -79,12 +79,12 @@ class ServerSocket:
                 elif Texto_joint.find('2') >= 0:
                     # Se procesan los ángulos y se mandan de regreso
 
-                    AjuRecorAng = [171,365,171+28,365+28] # x,y,ancho,alto
+                    AjuRecorAng = [183,372,183+12,372+23] # x,y,ancho,alto
                     Recorte_Ang = decimg[AjuRecorAng[0]:AjuRecorAng[2],AjuRecorAng[1]:AjuRecorAng[3]]
                     #cv2.imwrite("AnguloJoint2.jpg",Recorte_Ang)
                     Texto1 = Process_number(Recorte_Ang)
 
-                    AjuRecorAng = [87,373,87+28,373+28] # x,y,ancho,alto
+                    AjuRecorAng = [99,378,99+13,378+23] # x,y,ancho,alto
                     Recorte_Ang = decimg[AjuRecorAng[0]:AjuRecorAng[2],AjuRecorAng[1]:AjuRecorAng[3]]
                     #cv2.imwrite("AnguloJoint2_1.jpg",Recorte_Ang)
                     Texto2 = Process_number(Recorte_Ang)
@@ -97,7 +97,7 @@ class ServerSocket:
                 elif Texto_joint.find('3') >= 0:
                     # Se procesan los ángulos y se mandan de regreso
 
-                    AjuRecorAng = [179,376,179+15,376+27] # x,y,ancho,alto
+                    AjuRecorAng = [181,378,181+14,378+27] # x,y,ancho,alto
                     Recorte_Ang = decimg[AjuRecorAng[0]:AjuRecorAng[2],AjuRecorAng[1]:AjuRecorAng[3]]
                     cv2.imwrite("AnguloJoint3.jpg",Recorte_Ang)
                     Texto = Process_number(Recorte_Ang)
