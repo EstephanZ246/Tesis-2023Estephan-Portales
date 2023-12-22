@@ -1,0 +1,24 @@
+
+Para reconocer las imágenes tomadas en HUMANA, las recientes
+
+Corte para Joint 1:
+AjuRecorAng = [] # x,y,vetical,horizontal
+179 376
+
+15 27
+
+Corte para Joint 2:
+AjuRecorAng = [] # x,y,vetical,horizontal
+AjuRecorAng = [] # x,y,vetical,horizontal
+
+Corte para Joint 3:
+AjuRecorAng = [] # x,y,vetical,horizontal
+
+El aumento que ha funcionado bien al momento es: 800
+y con esto se reconoce bien:
+- 20.1
+- 18.2
+- 21.2
+- -0.5
+- -23.3
+- 20.9
